@@ -10,7 +10,7 @@ CRUD Management on Users, Goals and Intervals
 
 ## How to Use:
 
-- Start apps.js with Node.js and go to http://localhost:3000/users
+- Start apps.js with Node.js and go to http://localhost:3000/table
 
 ## Technologies Used:
 
