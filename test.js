@@ -1,4 +1,6 @@
 //Test.js contiene ancora errori, ma se avete suggerimenti per impostarlo ne sono ben felice!
+
+
 const chai = require('chai');
 const sinon = require('sinon');
 const request = require('supertest');
@@ -25,7 +27,6 @@ describe('User Management', () => {
         name: 'Test',
         surname: 'User2'
       },
-      // Altri dati di prova per i tuoi test
     ]);
 
     await Goal.bulkCreate([
@@ -35,7 +36,6 @@ describe('User Management', () => {
       {
         goal: 'Test Goal 2'
       },
-      // Altri dati di prova per i tuoi test
     ]);
 
     await Interval.bulkCreate([
@@ -51,7 +51,6 @@ describe('User Management', () => {
         UserId: 2,
         GoalId: 2,
       },
-      // Altri dati di prova per i tuoi test
     ]);
   });
 
@@ -63,7 +62,6 @@ describe('User Management', () => {
         .expect(200)
         .end((err, res) => {
           if (err) return done(err);
-          // Verifica che la risposta contenga tutti gli utenti
           expect(res.body).to.be.an('array').to.have.lengthOf(2);
           done();
         });
@@ -85,7 +83,6 @@ describe('User Management', () => {
         .expect(200)
         .end((err, res) => {
           if (err) return done(err);
-          // Verifica che la risposta contenga l'utente appena creato
           expect(res.body).to.have.property('id');
           expect(res.body.email).to.equal(newUser.email);
           expect(res.body.name).to.equal(newUser.name);
@@ -95,5 +92,5 @@ describe('User Management', () => {
     });
   });
 
-  // Altri test per l'aggiornamento, la cancellazione e altre funzionalità
+  // Altri test
 });
