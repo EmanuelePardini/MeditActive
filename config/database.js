@@ -1,7 +1,7 @@
 // config/database.js
 const { Sequelize } = require('sequelize');
 
-const sequelize = new Sequelize('MeditActive', 'root', 'dosl3181', {
+const sequelize = new Sequelize('MeditActive', 'root', 'pw', {
   host: 'localhost',
   dialect: 'mysql',
 });
